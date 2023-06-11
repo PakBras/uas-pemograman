@@ -7,6 +7,13 @@ if(isset($_POST['submit'])){
 
     $sql="INSERT INTO gamereq (nama_game,jenis_game,developer) values('$nama_game','$jenis_game','$developer')";
     $result=mysqli_query($con,$sql);
+    if($result){
+      //echo "Data inserted successfully;
+      header('location:submit.php');
+    }else{
+      die(mysqli_error($con));
+    }
+    
 }
 ?>
 

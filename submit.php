@@ -1,3 +1,6 @@
+<?php
+include 'include/connect.php';?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -51,7 +54,27 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+
+      <?php
+      $sql = "SELECT * FROM gamereq";
+      $result = mysqli_query($con, $sql);
+      
+      if ($result) {
+          while($row = mysqli_fetch_assoc($result)){
+            $id=$row['id'];
+            $nama_game=$row['nama_game'];
+            $jenis_game=$row['jenis_game'];
+            $developer=$row['developer'];
+            echo '<th scope="row">'.$id.'</th>
+            <td>'.$nama_game.'</td>
+            <td>'.$jenis_game.'</td>
+            <td>'.$developer.'</td>
+            </tr>';
+          }
+      }
+
+    ?>
+        <!-- <tr>
           <th scope="row">1</th>
           <td>#</td>
           <td>#</td>
@@ -120,7 +143,7 @@
             <button type="button" class="btn btn-primary">Ubah</button>
             <button type="button" class="btn btn-danger">Hapus</button>
           </td>
-        </tr>
+        </tr> -->
       </tbody>
     </table>
     <h1 style="text-align:right; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><button type="button" class="btn btn-primary"><a href="nextsubmit.php" style="color: aliceblue; text-decoration: none;">Submit Game</button></a></h1> 
