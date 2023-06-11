@@ -71,7 +71,7 @@ include 'include/connect.php';?>
             <td>'.$developer.'</td>
             <td>
             <button type="button" class="btn btn-primary" href="ubah.php">Ubah</button>
-            <button type="button" class="btn btn-danger" href="delete.php? deleteid='.$id.'">Hapus</button>
+            <button class="btn btn-danger"><a href=delete.php?deleteid='.$id.'>Hapus</a></button>
             </td>
             </tr>';
           }
