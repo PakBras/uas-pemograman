@@ -1,19 +1,12 @@
 <?php
-include 'connect.php';
+include 'include/connect.php';
 if(isset($_POST['submit'])){
-    $id=$_POST['id'];
-    $nama_game=$_POST['nama game'];
-    $jenis_game=$_POST['jenis game'];
+    $nama_game=$_POST['nama_game'];
+    $jenis_game=$_POST['jenis_game'];
     $developer=$_POST['developer'];
 
-    $sql="insert into 'submit' (id,nama game,jenis,game,developer)
-    values('$id','$nama_game','$jenis_game','$developer')";
-    $result=mysqli_query($conn,$sql);
-    if($result){
-        echo "connected succesfully";
-    }else{
-        echo (mysqli_error($conn));
-    }
+    $sql="INSERT INTO gamereq (nama_game,jenis_game,developer) values('$nama_game','$jenis_game','$developer')";
+    $result=mysqli_query($con,$sql);
 }
 ?>
 
@@ -59,16 +52,12 @@ if(isset($_POST['submit'])){
 <body>
 <form method="post">
   <div class="form-group">
-    <label>ID</label>
-    <input type="text" class="form-control" placeholder="Masukan id" name = "id" autocomplete="ogg">
-  </div>
-  <div class="form-group">
     <label>Nama Game</label>
-    <input type="text" class="form-control" placeholder="Masukan Nama Game" name="nama game" autocomplete="ogg">
+    <input type="text" class="form-control" placeholder="Masukan Nama Game" name="nama_game" autocomplete="ogg">
   </div>
   <div class="form-group">
     <label>Jenis Game</label>
-    <input type="text" class="form-control" placeholder="Masukan Jenis Game" name="jenis game" autocomplete="ogg">
+    <input type="text" class="form-control" placeholder="Masukan Jenis Game" name="jenis_game" autocomplete="ogg">
   </div>
   <div class="form-group">
     <label>Developer</label>
