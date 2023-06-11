@@ -1,7 +1,3 @@
-<?php
-    include_once'includes/dbh-inc.php';
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -42,10 +38,93 @@
     </nav>
   </header>
   <body>
-    $conn;
-    
-    <h1><button type="button" class="btn btn-primary" href="">Submit here</button></h1>
-    
+    <br><div class="container border">
+    <br><h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 25px; text-align: center;">LIST GAME</h1>
+    <table class="table table-hover table-bordered" style="justify-content: center; border:#808080;">
+      <thead class="thead table-secondary" style="text-align: center;">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nama Game</th>
+          <th scope="col">Jenis Game</th>
+          <th scope="col">Developer</th>
+          <th scope="col">Act</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>#</td>
+          <td>#</td>
+          <td>#</td>
+          <td>
+            <button type="button" class="btn btn-primary">Ubah</button>
+            <button type="button" class="btn btn-danger">Hapus</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>#</td>
+          <td>#</td>
+          <td>#</td>
+          <td>
+            <button type="button" class="btn btn-primary">Ubah</button>
+            <button type="button" class="btn btn-danger">Hapus</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>#</td>
+          <td>#</td>
+          <td>#</td>
+          <td>
+            <button type="button" class="btn btn-primary">Ubah</button>
+            <button type="button" class="btn btn-danger">Hapus</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>#</td>
+          <td>#</td>
+          <td>#</td>
+          <td>
+            <button type="button" class="btn btn-primary">Ubah</button>
+            <button type="button" class="btn btn-danger">Hapus</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>#</td>
+          <td>#</td>
+          <td>#</td>
+          <td>
+            <button type="button" class="btn btn-primary">Ubah</button>
+            <button type="button" class="btn btn-danger">Hapus</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>#</td>
+          <td>#</td>
+          <td>#</td>
+          <td>
+            <button type="button" class="btn btn-primary">Ubah</button>
+            <button type="button" class="btn btn-danger">Hapus</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>#</td>
+          <td>#</td>
+          <td>#</td>
+          <td>
+            <button type="button" class="btn btn-primary">Ubah</button>
+            <button type="button" class="btn btn-danger">Hapus</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 style="text-align:right; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><button type="button" class="btn btn-primary"><a href="nextsubmit.html" style="color: aliceblue; text-decoration: none;">Submit Game</button></a></h1> 
+    </div> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   </body>
   <footer>
