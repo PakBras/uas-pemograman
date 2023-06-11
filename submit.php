@@ -70,8 +70,8 @@ include 'include/connect.php';?>
             <td>'.$jenis_game.'</td>
             <td>'.$developer.'</td>
             <td>
-            <button type="button" class="btn btn-primary" href="ubah.php">Ubah</button>
-            <button class="btn btn-danger"><a href=delete.php?deleteid='.$id.'>Hapus</a></button>
+            <button type="button" class="btn btn-primary"><a href="ubah.php?ubahid='.$id.'" style="color: white; text-decoration: none;">Ubah</a></button>
+            <button type="button" class="btn btn-danger"><a href="delete.php?deleteid='.$id.'" style="color: white; text-decoration: none;">Hapus</a></button>
             </td>
             </tr>';
           }
