@@ -1,14 +1,15 @@
 <?php
 include 'include/connect.php';
+$id=$_GET['ubahid'];
 if(isset($_POST['submit'])){
     $nama_game=$_POST['nama_game'];
     $jenis_game=$_POST['jenis_game'];
     $developer=$_POST['developer'];
 
-    $sql="INSERT INTO gamereq (nama_game,jenis_game,developer) values('$nama_game','$jenis_game','$developer')";
+    $sql = "UPDATE gamereq SET id=$id, nama_game='$nama_game', jenis_game='$jenis_game', developer='$developer' WHERE id=$id";
     $result=mysqli_query($con,$sql);
     if($result){
-      //echo "Data inserted successfully;
+      //echo "Updated";
       header('location:submit.php');
     }else{
       die(mysqli_error($con));
@@ -58,7 +59,7 @@ if(isset($_POST['submit'])){
   </header>
 <body>
 <br><div class="container border">
-    <br><h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 25px; text-align: center;">SUBMIT GAME</h1>
+    <br><h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 25px; text-align: center;">UBAH DATA</h1>
     <table class="table table-hover table-bordered" style="justify-content: center; border:#808080;">
   <table>
 <form method="post">
@@ -74,9 +75,9 @@ if(isset($_POST['submit'])){
     <label>Developer</label>
     <input type="text" class="form-control" placeholder="Masukan Nama Developer" name="developer" autocomplete="ogg">
   </div>
-  <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+  <button type="submit" class="btn btn-primary" name="submit">Ubah</button>
 </form>
 </table>
 </body>
-<a name="nextsubmit.php"></a>
+<a name="ubah.php"></a>
 </html>

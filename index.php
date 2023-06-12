@@ -28,9 +28,9 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="about.php">About</a></li>
-                  <li><a class="dropdown-item" href="creator.php">Creator</a></li>
+                  <li><a class="dropdown-item" href="about.php">Creator</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="support.php">Support</a></li>
+                  <li><a class="dropdown-item" href="about.php">Support</a></li>
                 </ul>
               </li>
             </ul>
